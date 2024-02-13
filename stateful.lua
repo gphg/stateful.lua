@@ -124,7 +124,7 @@ local function _getCurrentState(self)
 end
 
 local function _getStateFromClassByName(self, stateName)
-  local state = self.class.static.states[stateName]
+  local state = self:class().static.states[stateName]
   _assertExistingState(self, state, stateName)
   return state
 end
@@ -138,7 +138,7 @@ local function _getStateIndexFromStackByName(self, stateName)
 end
 
 local function _getStateName(self, target)
-  for name,state in pairs(self.class.static.states) do
+  for name,state in pairs(self:class().static.states) do
     if state == target then return name end
   end
 end
