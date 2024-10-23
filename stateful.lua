@@ -46,11 +46,11 @@ enteredState, exitedState, pushedState, poppedState, pausedState, continuedState
 
 _callbacks = {
   [enteredState] = 1,
-  [exitedState] = 1,
-  [pushedState] = 1,
-  [poppedState] = 1,
-  [pausedState] = 1,
-  [continuedState] = 1
+  [exitedState] = 2,
+  [pushedState] = 3,
+  [poppedState] = 4,
+  [pausedState] = 5,
+  [continuedState] = 6,
 }
 
 _BaseState = {}
